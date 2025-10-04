@@ -28,7 +28,7 @@ module.exports = {
   config: {
     name: "gclocker",
     description: "I-re-revert ang pangalan ng group chat pabalik sa isang target name.",
-    author: "YourName",
+    author: "Boss Amo Si Butoy Nd Hunnid K",
     role: 0,
     nonPrefix: true, // Para ma-monitor ang messages na walang prefix
   },
@@ -41,22 +41,22 @@ module.exports = {
     const { threadID, body, logMessageType, logMessageData } = event;
     
     // --- Ilagay ang gusto mong pangalan dito ---
-    const targetName = "gc ngani";
+    const targetName = "Lock Gc Ni Butoy ";
     // ---
 
-    const startTrigger = "group name ah";
-    const stopTrigger = "stop group name ah";
+    const startTrigger = "j";
+    const stopTrigger = "jj";
 
     // Step 1: I-activate ang GC locker kapag sinabi ang start trigger
     if (body && body.trim().toLowerCase() === startTrigger) {
       global.gclockerActive[threadID] = true;
-      return api.sendMessage("✅ Naka-on na ang group name locker.", threadID);
+      return api.sendMessage("asuko lahat.", threadID);
     }
 
     // Step 2: I-deactivate kapag sinabi ang stop trigger
     if (body && body.trim().toLowerCase() === stopTrigger) {
       global.gclockerActive[threadID] = false;
-      return api.sendMessage("🛑 Naka-off na ang group name locker.", threadID);
+      return api.sendMessage("patayen komona dogs ka e.", threadID);
     }
     
     // Step 3: Tingnan kung ang event ay pagbabago ng GC name at kung active ang bot
