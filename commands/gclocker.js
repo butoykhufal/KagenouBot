@@ -44,9 +44,8 @@ module.exports = {
     const targetName = "Lock Gc Ni Butoy ";
     // ---
 
-    const startTrigger = "j";
-    const stopTrigger = "jj";
-
+    const startTrigger = ",";
+    const stopTrigger = "j";
     // Step 1: I-activate ang GC locker kapag sinabi ang start trigger
     if (body && body.trim().toLowerCase() === startTrigger) {
       global.gclockerActive[threadID] = true;
